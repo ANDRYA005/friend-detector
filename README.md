@@ -1,1 +1,1 @@
-# friend-detector
+# The Friend Detector
