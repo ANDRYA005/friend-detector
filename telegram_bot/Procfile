@@ -1,0 +1,2 @@
+web: python3 name_setter_bot.py --set_staged_endpoint https://friend-detector.herokuapp.com/telegram_hook/set_staged/ --get_staged_endpoint https://friend-detector.herokuapp.com/telegram_hook/get_staged/ --dev_or_prod prod
+worker: python3 name_setter_bot.py --set_staged_endpoint https://friend-detector.herokuapp.com/telegram_hook/set_staged/ --get_staged_endpoint https://friend-detector.herokuapp.com/telegram_hook/get_staged/ --dev_or_prod prod

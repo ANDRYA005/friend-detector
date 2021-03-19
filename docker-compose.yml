@@ -1,0 +1,16 @@
+version: '3'
+services:
+    django:
+       build: ./telegram_django
+       volumes: 
+            - ./telegram_django:/telegram_django
+       command: python manage.py runserver 0.0.0.0:8000
+       ports:
+            - 8000:8000
+    telegram:
+        build: ./telegram_bot
+        volumes:
+            - ./telegram_bot:/telegram_bot
+        command: python name_setter_bot.py --set_staged_endpoint http://django:8000/telegram_hook/set_staged/ --get_staged_endpoint http://django:8000/telegram_hook/get_staged/
+        ports:
+            - 8010:8020

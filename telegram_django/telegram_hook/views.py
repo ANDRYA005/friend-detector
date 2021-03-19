@@ -49,7 +49,7 @@ def set_staged_name(request):
 
 @api_view(['GET'])
 def get_staged_name(request):
-    staged_person = Person.objects.last()
+    staged_person = Person.objects.latest('id')
     serializer = PersonSerializer(staged_person)
     return Response(data=serializer.data, status=status.HTTP_200_OK)
 
