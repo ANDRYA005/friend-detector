@@ -10,7 +10,7 @@ class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
-    @action(detail=False)
+    @action(methods=['get'], detail=False)
     def get_staged(self, request):
         staged_person = self.queryset.order_by("-id")[0]
         serializer = self.get_serializer(staged_person)
