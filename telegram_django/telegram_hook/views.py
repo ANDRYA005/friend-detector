@@ -12,6 +12,6 @@ class PersonViewSet(viewsets.ModelViewSet):
 
     @action(methods=['get'], detail=False)
     def get_staged(self, request):
-        staged_person = self.queryset.order_by("-id")[0]
+        staged_person = self.queryset.latest('id')
         serializer = self.get_serializer(staged_person)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
