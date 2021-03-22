@@ -98,7 +98,7 @@ def main(dev_or_prod):
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('stage', set_staged_name, pass_args=True))
     dp.add_handler(CommandHandler('get_staged', get_staged_name))
-    
+
 
     if dev_or_prod == "dev":
         print("local dev")
@@ -118,13 +118,13 @@ if __name__=='__main__':
         "--set_staged_endpoint",
         help="The api endpoint for setting a name as staged.",
         type=str,
-        default='http://localhost:8000/telegram_hook/set_staged/',
+        default='http://localhost:8000/telegram_hook/people/',
     )
     parser.add_argument(
         "--get_staged_endpoint",
         help="The api endpoint for getting the staged name.",
         type=str,
-        default='http://localhost:8000/telegram_hook/get_staged/',
+        default='http://localhost:8000/telegram_hook/people/get_staged/',
     )
     parser.add_argument(
         "--dev_or_prod",

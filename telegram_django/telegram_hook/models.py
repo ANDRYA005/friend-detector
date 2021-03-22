@@ -1,24 +1,14 @@
 from django.db import models
 
-class Person(models.Model):
 
+class Person(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.name
-    
+        return f"{self.name} ({self.id})"
+
     class Meta:
+        ordering = ["id"]
         verbose_name = "Person"
         verbose_name_plural = "People"
-
-
-# class StagedPerson(models.Model):
-
-#     person = models.OneToOneField(Person, null=True, on_delete=models.SET_NULL)
-
-#     def __str__(self):
-#         return self.person.name
-    
-#     class Meta:
-#         verbose_name = "Staged Person"
-#         verbose_name_plural = "Staged Person"
