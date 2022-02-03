@@ -3,10 +3,10 @@
 ## Goal
 
 The main purpose of this project was to play around with some of the tools needed for developing a multi-service system. Specifically:
-* **Service 1:** `telegram` was used to for interfacing with users
+* **Service 1:** `telegram` was used to for interfacing with users.
 * **Service 2:** `django` and `djangorestframework` were used for processing and storing user data (`serializers` and `viewsets` were used to simplify the process). Two API endpoints were exposed (see more on this later).
-* `docker` was used for containerising the services and `docker-compose` was used to make local testing easier
-* `heroku` was used to deploy both services.
+* `docker` was used for containerising the services and `docker-compose` was used to make local testing easier.
+* `heroku` was used to deploy both services. The system is live, and you can interface with it by messaging `@FriendDetectorBot` on Telegram.
 
 
 ## Desired functionality
