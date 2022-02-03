@@ -26,7 +26,7 @@ After a user starts a conversation with the telegram bot, you can then `\stage` 
 
 In order to validate whether the name has been staged, you can use `\get_staged`. This does the following:
 1. Sends a `GET` request to an API endpoint exposed by the django app.
-2. Retrieves the most recent name in the database.
+2. Retrieves the most recent name from the database.
 3. Returns the name to the telegram bot, which then sends it back to the user. 
 
 ![Alt Text](https://github.com/rs-anderson/friend-detector/blob/main/demo/get_staged.gif)
